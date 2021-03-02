@@ -1,16 +1,50 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Nashville Software School</title>
-        <link rel="stylesheet" href="./styles/main.css">
-    </head>
 
-    <body>
-        <main id="container">
+<head>
+    <meta charset="utf-8">
+    <title>Nashville Software School</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
 
-        </main>
+<body>
+    <header>
+        <h1>Daily Journal</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form>
+                <fieldset>
+                    <div class="date">
+                        <label for="JournalDate">Date of Entry</label><br>
+                        <input type="date" name="JournalDate" id="JournalDate">
+                    </div>
+                    <div class="topic">
+                        <label for="Topic">Topic</label><br>
+                        <input type="text" name="Topic" id="Topic">
+                    </div>
+                    <div class="entry">
+                        <label for="JournalEntry">Journal Entry</label><br>
+                        <textarea id="JournalEntry" name="JournalEntry"></textarea>
+                    </div>
+                    <div class=mood>
+                        <label for="mood">Mood</label><br>
+                        <select name="mood" id="mood">
+                            <option value="happy">Happy</option>
+                            <option value="fine">Fine</option>
+                            <option value="sad">Sad</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button>Submit</button>
+                    </div>
+                    
+                </fieldset>
+            </form> 
+        </div>
+        
+    </main>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
 
-        <script type="module" src="./scripts/main.js"></script>
-    </body>
 </html>
