@@ -12,6 +12,7 @@
         <h1>Daily Journal</h1>
     </header>
     <main>
+        
         <div class="container">
             <form>
                 <fieldset>
@@ -27,7 +28,7 @@
                         <label for="JournalEntry">Journal Entry</label><br>
                         <textarea id="JournalEntry" name="JournalEntry"></textarea>
                     </div>
-                    <div class=mood>
+                    <div class="mood">
                         <label for="mood">Mood</label><br>
                         <select name="mood" id="mood">
                             <option value="happy">Happy</option>
@@ -38,11 +39,15 @@
                     <div>
                         <button>Submit</button>
                     </div>
-                    
                 </fieldset>
-            </form> 
+            </form>
         </div>
-        
+        <div class="entry-log">
+            <aside>
+                <h3>List of Entries</h3>
+                
+            </aside>
+        </div>
     </main>
     <script type="module" src="./scripts/main.js"></script>
 </body>
