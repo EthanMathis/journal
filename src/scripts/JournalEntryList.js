@@ -4,8 +4,8 @@ import { JournalEntryComponent } from "./JournalEntry.js"
 
 
 export const EntryListComponent = (arrayOfEntries) => {
-    // Use the journal entry data from the data module component
-    let entryHTML = "<h3>List of Entries</h3>";
+    // Use the journal entry data from the data module
+    let entryHTML = "<h3>List of Entries</h3><hr>";
     const entryLog = document.querySelector(".entry-log")
     for (const entry of arrayOfEntries) {
        entryHTML += JournalEntryComponent(entry);
