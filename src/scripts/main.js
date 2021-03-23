@@ -1,10 +1,12 @@
 console.log("Welcome to the main module")
 
 import { EntryListComponent } from "./JournalEntryList.js";
-import { getEntries, postEntry } from "./Data/DataManager.js";
+import { getEntries, postEntry, showPostList, deletePost } from "./Data/DataManager.js";
 import { apiObj } from "./apiObject.js";
 
-const startJournal = () => {
+const main = document.querySelector(".journal")
+
+export const startJournal = () => {
     getEntries()
     .then(entriesFromAPI => {
         EntryListComponent(entriesFromAPI);
@@ -17,10 +19,20 @@ document.getElementById("submit").addEventListener("click", (event) => {
     event.preventDefault()
     const newEntryObj = apiObj();
     postEntry(newEntryObj).then(parsedResponse => {
-        console.log("trying to test the button", parsedResponse)
+        showPostList()
     })
 } );
 
+main.addEventListener("click", event => {
+    event.preventDefault();
+    if (event.target.id.startsWith("delete")) {
+      const postId = event.target.id.split("__")[1];
+      deletePost(postId)
+        .then(response => {
+          showPostList();
+        })
+    }
+  })
 
 // selects the "date" section from the form
 var field = document.querySelector("#JournalDate");

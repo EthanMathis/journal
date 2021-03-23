@@ -13,6 +13,13 @@
       "entry": "I tried learn how to structure my .js files and organize my functions. It hurt my brain.",
       "mood": "Sad",
       "id": 2
+    },
+    {
+      "date": "2021-03-23",
+      "concept": "API's",
+      "entry": "We recently finished a project that involved working with a group to build a single page app that had 3 dynamically populated (from 3 different API's) dropdown menu's. Once something was selected from the dropdown's, the selected options would then appear in an itinerary preview list, at which point a save button would enable, allowing the user to save these \"planned trips\" into a JSON database. We finished the project having successfully met MVP with a few extra features.",
+      "mood": "happy",
+      "id": 3
     }
   ]
 }
