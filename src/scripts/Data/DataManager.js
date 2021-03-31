@@ -1,14 +1,15 @@
-import { startJournal } from "../main.js"
-import { entryList } from "../entryList.js"
+import { entryEdit } from "../entries/entryEdit.js"
+import { renderEntryList } from "../entries/renderEntries.js"
+
 
 export const getEntries = () => {
-    return fetch("http://localhost:8089/entries")
+    return fetch("http://localhost:8088/entries")
     .then(response => response.json())
 
 }
 
 export const postEntry = (entry) => {
-    return fetch("http://localhost:8089/entries", {
+    return fetch("http://localhost:8088/entries", {
         method: "POST", 
         headers: {
             "Content-Type": "application/json"
@@ -20,7 +21,7 @@ export const postEntry = (entry) => {
 }
 
 export const deletePost = (postId) => {
-    return fetch(`http://localhost:8089/entries/${postId}`, {
+    return fetch(`http://localhost:8088/entries/${postId}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
@@ -31,9 +32,29 @@ export const deletePost = (postId) => {
         .then(getEntries)
   }
 
+  export const updatePost = (postObj) => {
+    return fetch(`http://localhost:8088/entries/${postObj.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postObj)
+  
+    })
+        .then(response => response.json())
+        .then(getEntries)
+  }
+
+  export const getSinglePost = (postId) => {
+    return fetch(`http://localhost:8088/entries/${postId}`)
+      .then(response => response.json())
+  }
+
+  export const showEdit = (entryObj) => {
+      const entryElement = document.querySelector(".form-container")
+      entryElement.innerHTML = entryEdit(entryObj)
+  }
+
   export const showPostList = () => {
-      const listElement = document.querySelector(".entry-log");
-      getEntries().then((allPosts) => {
-          listElement.innerHTML = entryList(allPosts.reverse())
-      })
+      getEntries().then((allPosts) => renderEntryList(allPosts))
   }
