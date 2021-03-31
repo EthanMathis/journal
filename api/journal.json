@@ -1,18 +1,32 @@
 {
   "entries": [
     {
-      "date": "02/23/2021",
-      "concept": "HTML & CSS",
-      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Fine",
+      "date": "2021-03-25",
+      "concept": "JSON db & Event Listeners",
+      "entry": "I'm learning how to make an edit button so that I can update any of my older posts ",
+      "mood": "happy",
       "id": 1
     },
     {
-      "date": "02/26/2021",
-      "concept": "Complex Javascript",
-      "entry": "I tried learn how to structure my .js files and organize my functions. It hurt my brain.",
-      "mood": "Sad",
+      "date": "2021-03-25",
+      "concept": "API's",
+      "entry": "We recently finished a project that involved taking several API's and using them to populate 3 dropdown menu's (eatery, attraction, and national park). We then used a weather API to grab the weather relative to the location of the selected park and then allowed the user to save this list of chosen items into an itinerary. ",
+      "mood": "fine",
       "id": 2
+    },
+    {
+      "date": "2021-03-31",
+      "concept": "test",
+      "entry": "testing testing testing",
+      "mood": "sad",
+      "id": 3
+    },
+    {
+      "date": "2021-03-31",
+      "concept": "trying to fix the journal",
+      "entry": "I'm currently trying to fix the layout of my journal because its currently a dumpster fire.",
+      "mood": "fine",
+      "id": 4
     }
   ]
 }
